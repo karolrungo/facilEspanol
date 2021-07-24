@@ -1,3 +1,5 @@
+DROP DATABASE IF EXISTS "facilEspanolDb";
+CREATE DATABASE "facilEspanolDb";
 
-create database "facilEspanolDb";
-create user "facilEspanolUser" with encrypted password 'facilEspanolPass';
+DROP USER IF EXISTS "facilEspanolUser";
+CREATE USER "facilEspanolUser" WITH ENCRYPTED PASSWORD 'facilEspanolPass';
