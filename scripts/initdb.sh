@@ -1,8 +1,3 @@
 #!/bin/bash
 
-sudo -u postgres -i psql -c '
-\set autocommit on;
-create database "facilEspanolDb";
-create user "facilEspanolUser" with encrypted password '"'"'facilEspanolPass'"'"';
-'
-
+psql postgres://postgres:postgres@localhost:5432/postgres < createDatabaseWithUser.sql
