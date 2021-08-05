@@ -64,6 +64,7 @@ func (env *Env) Register(responseWriter http.ResponseWriter, r *http.Request) {
 	newUser := model.User{
 		Username:     username,
 		PasswordHash: string(hashedPassword),
+		Email:        registerReq.Email,
 	}
 
 	if err := env.store.CreateUser(&newUser); err != nil {
